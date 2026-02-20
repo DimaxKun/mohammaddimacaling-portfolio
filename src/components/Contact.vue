@@ -106,14 +106,16 @@ const accessKey = ref('d8ed7a2f-16cb-448b-a7a7-5e3e8e8699bb');
 const recaptchaSiteKey = '6Le3x3EsAAAAAEHgkj8vfyJmvQixXcJt-7qPe094';
 const useRecaptcha = ref(true);
 
+
 const formData = ref({
-    name: '',
-    email: '',
-    message: ''
+  name: '',
+  email: '',
+  message: ''
 });
 
 const isSubmitting = ref(false);
 const errorMessage = ref('');
+
 
 const successModal = ref(null);
 const errorModal = ref(null);
@@ -121,129 +123,129 @@ const errorModal = ref(null);
 let successModalInstance = null;
 let errorModalInstance = null;
 
+
 const recaptchaContainer = ref(null);
 const recaptchaWidgetId = ref(null);
 const recaptchaToken = ref('');
-
 let interval = null;
 
 // When user successfully verifies
 function onRecaptchaSuccess(token) {
-    recaptchaToken.value = token;
+  recaptchaToken.value = token;
 }
 
 // When captcha expires
 function onRecaptchaExpired() {
-    recaptchaToken.value = '';
+  recaptchaToken.value = '';
 }
 
-// Render reCAPTCHA safely
 function renderRecaptcha() {
-    if (!window.grecaptcha || !recaptchaContainer.value) return;
+  if (
+    !window.grecaptcha ||
+    !recaptchaContainer.value ||
+    recaptchaWidgetId.value !== null
+  ) return;
 
-    recaptchaWidgetId.value = window.grecaptcha.render(
-        recaptchaContainer.value,
-        {
-            sitekey: recaptchaSiteKey,
-            callback: onRecaptchaSuccess,
-            'expired-callback': onRecaptchaExpired
-        }
-    );
+  recaptchaWidgetId.value = window.grecaptcha.render(
+    recaptchaContainer.value,
+    {
+      sitekey: recaptchaSiteKey,
+      callback: onRecaptchaSuccess,
+      'expired-callback': onRecaptchaExpired
+    }
+  );
 }
 
 // Reset captcha
 function resetRecaptcha() {
-    if (
-        useRecaptcha.value &&
-        window.grecaptcha &&
-        recaptchaWidgetId.value !== null
-    ) {
-        window.grecaptcha.reset(recaptchaWidgetId.value);
-        recaptchaToken.value = '';
-    }
+  if (
+    useRecaptcha.value &&
+    window.grecaptcha &&
+    recaptchaWidgetId.value !== null
+  ) {
+    window.grecaptcha.reset(recaptchaWidgetId.value);
+    recaptchaToken.value = '';
+  }
 }
 
 const handleSubmit = async () => {
-    // Validate reCAPTCHA
-    if (useRecaptcha.value && !recaptchaToken.value) {
-        errorMessage.value = 'Please complete the reCAPTCHA verification.';
-        errorModalInstance.show();
-        return;
+  // Validate reCAPTCHA locally
+  if (useRecaptcha.value && !recaptchaToken.value) {
+    errorMessage.value = 'Please complete the reCAPTCHA verification.';
+    errorModalInstance.show();
+    return;
+  }
+
+  isSubmitting.value = true;
+
+  try {
+    const payload = {
+      access_key: accessKey.value,
+      name: formData.value.name,
+      email: formData.value.email,
+      message: formData.value.message
+    };
+
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      // Reset form
+      formData.value = {
+        name: '',
+        email: '',
+        message: ''
+      };
+
+      resetRecaptcha();
+      successModalInstance.show();
+    } else {
+      errorMessage.value =
+        result.message || 'Failed to send message. Please try again.';
+      errorModalInstance.show();
     }
-
-    isSubmitting.value = true;
-
-    try {
-        const payload = {
-            access_key: accessKey.value,
-            name: formData.value.name,
-            email: formData.value.email,
-            message: formData.value.message
-        };
-
-        if (useRecaptcha.value) {
-            payload['g-recaptcha-response'] = recaptchaToken.value;
-        }
-
-        const response = await fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                Accept: 'application/json'
-            },
-            body: JSON.stringify(payload)
-        });
-
-        const result = await response.json();
-
-        if (result.success) {
-            // Reset form
-            formData.value = {
-                name: '',
-                email: '',
-                message: ''
-            };
-
-            resetRecaptcha();
-            successModalInstance.show();
-        } else {
-            errorMessage.value =
-                result.message || 'Failed to send message. Please try again.';
-            errorModalInstance.show();
-        }
-    } catch (error) {
-        console.error('Submission error:', error);
-        errorMessage.value =
-            'An unexpected error occurred. Please try again later.';
-        errorModalInstance.show();
-    } finally {
-        isSubmitting.value = false;
-    }
+  } catch (error) {
+    console.error('Submission error:', error);
+    errorMessage.value =
+      'An unexpected error occurred. Please try again later.';
+    errorModalInstance.show();
+  } finally {
+    isSubmitting.value = false;
+  }
 };
 
+
 onMounted(() => {
-    successModalInstance = new Modal(successModal.value);
-    errorModalInstance = new Modal(errorModal.value);
+  successModalInstance = new Modal(successModal.value);
+  errorModalInstance = new Modal(errorModal.value);
 
-    // Load reCAPTCHA script if not already loaded
-    if (useRecaptcha.value && !window.grecaptcha) {
-        const script = document.createElement('script');
-        script.src = 'https://www.google.com/recaptcha/api.js?render=explicit';
-        script.async = true;
-        script.defer = true;
-        document.head.appendChild(script);
+  // Load reCAPTCHA script only once
+  if (useRecaptcha.value && !window.grecaptcha) {
+    const script = document.createElement('script');
+    script.src = 'https://www.google.com/recaptcha/api.js?render=explicit';
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+
+  // Wait until grecaptcha is fully ready
+  interval = setInterval(() => {
+    if (window.grecaptcha && window.grecaptcha.render) {
+      renderRecaptcha();
+      clearInterval(interval);
     }
-
-    // Wait until grecaptcha is ready, then render
-    interval = setInterval(() => {
-        if (window.grecaptcha && window.grecaptcha.render) {
-            renderRecaptcha();
-            clearInterval(interval);
-        }
-    }, 100);
+  }, 100);
 });
 
 onBeforeUnmount(() => {
-    if (interval) clearInterval(interval);
+  if (interval) clearInterval(interval);
 });
 </script>
