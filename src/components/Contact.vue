@@ -1,7 +1,7 @@
 <template>
     <!-- Join Map & Contact Form -->
     <div id="contact" class="row align-items-stretch">
-        <h1 class="mt-5 text-center text-light">Contact Us</h1>
+        <h1 class="mt-5 text-center text-light">Contact Me</h1>
         <!-- Map Start -->
         <div id="map" class="col-12 col-md-6 d-flex justify-content-center">
             <div class="col-12 col-md-10 p-3 d-flex flex-column">

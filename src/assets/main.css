@@ -45,12 +45,12 @@ body {
 .project-card:hover {
     transform: scale(1.05);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .project-card img {
-    height: 200px;
-    object-fit:scale-down;
+    height: 240px;
+    object-fit:cover;
 }
 
 .project-card h5{
@@ -63,12 +63,18 @@ body {
     font-weight: 700;
 }
 
+#projects p{
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+
 .social-icon{
     font-size: 2rem;
 }
 
-.btn:hover {
-    background-color: white !important;
+.btn-primary:hover {
+    background-color: transparent !important;
     color: var(--bs-primary) !important;
     border-color: var(--bs-primary) !important;
 }

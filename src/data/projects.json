@@ -1,26 +1,30 @@
 [
   {
     "id": 1,
-    "title": "E-commerce API Documentation",
-    "description": "Dynamic E-Commerce Workflow Management. The system features dynamic routes for order processing, real-time inventory updates, and secure user authentication. It also supports seamless automated order reporting and comprehensive product management. Documented Backend API published publicly using Postman.",
-    "image": "/images/placeholder-img.jpg"
+    "title": "E-commerce App",
+    "description": "MEVN E-Commerce Platform. The platform features dynamic product catalog with filtering and sorting, real-time search, seamless cart updates, secure checkout, and a comprehensive admin dashboard with real-time analytics and user management capabilities.",
+    "image": "/images/ecommerce_app.png",
+    "view": "https://toonstore.vercel.app/",
+    "source": "https://github.com/DimaxKun/toonstore"
   },
   {
     "id": 2,
-    "title": "Course Booking API Documentation",
-    "description": "RESTful API for managing course enrollments, featuring user registration, authentication, and retrieval of user details. Supports course creation, updates, archiving, activation, and student enrollment. Publicly documented using Postman.",
-    "image": "/images/placeholder-img.jpg"
+    "title": "E-commerce API Documentation",
+    "description": "Dynamic E-Commerce Workflow Management. The system features dynamic order processing routes, real-time inventory updates, secure user authentication, automated order reporting, and comprehensive product management, with a publicly documented backend API accessible via Postman.",
+    "image": "/images/ecommerce-api.png",
+    "view": "https://documenter.getpostman.com/view/51751426/2sBXc7LjjG",
+    "source": "https://github.com/DimaxKun/toonstore"
   },
   {
     "id": 3,
     "title": "Course Booking App",
-    "description": "A MERN-stack course enrollment system featuring user registration, authentication, and profile management. Authenticated users can create, update, archive, and activate courses. The platform also allows users to browse available courses and enroll seamlessly.",
+    "description": "A MEVN-stack course enrollment system featuring user registration, authentication, and profile management. Authenticated users can create, update, archive, and activate courses. The platform also allows users to browse available courses and enroll seamlessly.",
     "image": "/images/placeholder-img.jpg"
   },
   {
     "id": 4,
-    "title": "E-commerce App",
-    "description": "MERN E-Commerce Platform. The platform features dynamic product catalog with filtering and sorting, real-time search, seamless cart updates, secure checkout, and a comprehensive admin dashboard with real-time analytics and user management capabilities.",
+    "title": "Course Booking API Documentation",
+    "description": "RESTful API for managing course enrollments, featuring user registration, authentication, and retrieval of user details. Supports course creation, updates, archiving, activation, and student enrollment. Publicly documented using Postman.",
     "image": "/images/placeholder-img.jpg"
   },
   {
