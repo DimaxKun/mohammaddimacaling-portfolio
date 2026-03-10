@@ -13,7 +13,7 @@
     "description": "A MEVN-stack course enrollment system featuring user registration, authentication, and profile management. Authenticated users can create, update, archive, and activate courses. The platform also allows users to browse available courses and enroll seamlessly.",
     "image": "/images/course_app.png",
     "view": "https://course-booking-vue.vercel.app/",
-    "source": "https://github.com/DimaxKun/courseAPI"
+    "source": "https://github.com/DimaxKun/course-booking-vue"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "description": "AliDevHub is a MEVN full-stack blogging platform that enables users to register, publish blog posts, and engage through comments. The platform includes dynamic post management, role-based authentication, and an admin dashboard that allows administrators to manage users, posts, and overall platform content efficiently.",
     "image": "/images/alidevhub_app.png",
     "view": "https://alidevhub.vercel.app/",
-    "source": "https://github.com/DimaxKun/blogpostAPI"
+    "source": "https://github.com/DimaxKun/alidevhub"
   },
   {
     "id": 4,
