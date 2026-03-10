@@ -17,22 +17,25 @@
 
         <!-- Show more button -->
         <div class="d-flex justify-content-center mb-4">
-            <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#moreProjects"
-                aria-expanded="false">
-                Show More
+            <button
+                class="btn btn-primary"
+                data-bs-toggle="collapse"
+                data-bs-target="#moreProjects"
+                @click="isExpanded = !isExpanded"
+            >
+                {{ isExpanded ? "Show Less" : "Show More" }}
             </button>
         </div>
     </div>
 </template>
 
 <script setup>
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import ProjectCard from "./ProjectCard.vue";
 import projects from "../data/projects.json";
 
-// First 6 projects visible by default
-const visibleProjects = computed(() => projects.slice(0, 6));
+const isExpanded = ref(false);
 
-// Remaining projects hidden in collapse
+const visibleProjects = computed(() => projects.slice(0, 6));
 const hiddenProjects = computed(() => projects.slice(6));
 </script>
