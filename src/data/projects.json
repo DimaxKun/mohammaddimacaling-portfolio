@@ -9,46 +9,54 @@
   },
   {
     "id": 2,
+    "title": "Course Booking App",
+    "description": "A MEVN-stack course enrollment system featuring user registration, authentication, and profile management. Authenticated users can create, update, archive, and activate courses. The platform also allows users to browse available courses and enroll seamlessly.",
+    "image": "/images/course_app.png",
+    "view": "https://course-booking-vue.vercel.app/",
+    "source": "https://github.com/DimaxKun/courseAPI"
+  },
+  {
+    "id": 3,
+    "title": "Blog Posting App",
+    "description": "AliDevHub is a MEVN full-stack blogging platform that enables users to register, publish blog posts, and engage through comments. The platform includes dynamic post management, role-based authentication, and an admin dashboard that allows administrators to manage users, posts, and overall platform content efficiently.",
+    "image": "/images/alidevhub_app.png",
+    "view": "https://alidevhub.vercel.app/",
+    "source": "https://github.com/DimaxKun/blogpostAPI"
+  },
+  {
+    "id": 4,
+    "title": "Anime Collection Shop",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": "/images/anime-ecommerce.png",
+    "view": "https://dimaxkun.github.io/static-web-anime/",
+    "source": "https://github.com/DimaxKun/static-web-anime"
+  },
+  {
+    "id": 5,
+    "title": "Educational Resources Hub",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": "/images/uc-hub.png",
+    "view": "https://dimaxkun.github.io/educational-resource-web/",
+    "source": "https://github.com/DimaxKun/educational-resource-web"
+  },
+  {
+    "id": 6,
     "title": "E-commerce API Documentation",
     "description": "Dynamic E-Commerce Workflow Management. The system features dynamic order processing routes, real-time inventory updates, secure user authentication, automated order reporting, and comprehensive product management, with a publicly documented backend API accessible via Postman.",
     "image": "/images/ecommerce-api.png",
     "view": "https://documenter.getpostman.com/view/51751426/2sBXc7LjjG",
-    "source": "https://github.com/DimaxKun/toonstore"
+    "source": "https://github.com/DimaxKun/"
   },
   {
-    "id": 3,
-    "title": "Course Booking App",
-    "description": "A MEVN-stack course enrollment system featuring user registration, authentication, and profile management. Authenticated users can create, update, archive, and activate courses. The platform also allows users to browse available courses and enroll seamlessly.",
-    "image": "/images/placeholder-img.jpg"
-  },
-  {
-    "id": 4,
+    "id": 7,
     "title": "Course Booking API Documentation",
     "description": "RESTful API for managing course enrollments, featuring user registration, authentication, and retrieval of user details. Supports course creation, updates, archiving, activation, and student enrollment. Publicly documented using Postman.",
     "image": "/images/placeholder-img.jpg"
   },
   {
-    "id": 5,
-    "title": "Airline Booking System Mockup",
-    "description": "Side Project: Conceptual design showcasing an intuitive UI for flight search, seat selection, and booking confirmation, focusing on user experience and workflow efficiency.",
-    "image": "/images/placeholder-img.jpg"
-  },
-  {
-    "id": 6,
-    "title": "Airline Booking System Prototype",
-    "description": "Side Project: Interactive prototype simulating end-to-end airline booking functionalities, including flight search, reservation, payment processing, and real-time ticket management.",
-    "image": "/images/placeholder-img.jpg"
-  },
-  {
-    "id": 7,
-    "title": "Short Courses Capstone",
-    "description": "Placeholder for your Short courses capstone project.",
-    "image": "/images/placeholder-img.jpg"
-  },
-  {
     "id": 8,
-    "title": "Short Courses Capstone",
-    "description": "Placeholder for your Short courses capstone project.",
+    "title": "Blog Post API Documentation",
+    "description": "RESTful API for Dynamic Blog Content Management. The system provides secure user authentication, dynamic routes for creating, updating, and deleting blog posts, comment management, and role-based access for administrators to oversee platform content.",
     "image": "/images/placeholder-img.jpg"
   },
   {

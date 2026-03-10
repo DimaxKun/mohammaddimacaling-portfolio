@@ -2,7 +2,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-black">
         <div class="container">
-            <a id="logo-img" class="navbar-brand" href="#landing">Mohammad Ali</a>
+            <a id="logo-img" class="navbar-brand lobster-two-bold" href="#landing">Mohammad Ali</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

@@ -14,7 +14,7 @@
                     Full Stack Web Developer
                 </p>
                 <div>
-                    <a href="#projects"><button class="btn btn-primary">Explore My Projects</button></a>
+                    <a href="#projects"><button class="btn btn-primary about-btn">Explore My Projects</button></a>
                 </div>
             </div>
         </div>

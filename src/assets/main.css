@@ -2,40 +2,50 @@ body {
     overflow-x: hidden;
 }
 
-#profile-img{
+#profile-img {
     height: 14rem;
     width: 14rem;
+    border-radius: 100%;
+    box-shadow:
+        0 0 10px rgba(13, 110, 253, 0.7),
+        0 0 25px rgba(52, 152, 219, 0.6),
+        0 0 40px rgba(52, 152, 219, 0.5);
 }
 
 #landing {
     height: 100vh;
-    background: 
-      linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
-      url("/images/background-img.jpg") center no-repeat;
-      background-attachment: fixed;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url("/images/background-img.jpg") center no-repeat;
+    background-attachment: fixed;
 }
 
-#landing h1{
+#landing h1 {
     font-size: 2.5rem;
     font-weight: 700;
 }
 
-#landing p{
+#landing p {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.work-sans {
-    font-family: "Work Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
+.lobster-two-regular {
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 400;
     font-style: normal;
-    font-size: larger;
 }
 
-#bg-img{
+.lobster-two-bold {
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+#bg-img {
     height: 80.2vh;
-    object-fit:cover;
+    object-fit: cover;
 }
 
 .project-card {
@@ -44,32 +54,36 @@ body {
 
 .project-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-    /* cursor: pointer; */
+    box-shadow:
+        0 0 10px rgba(25, 135, 84, 0.8),
+        0 0 25px rgba(25, 135, 84, 0.7),
+        0 0 40px rgba(25, 135, 84, 0.6);
+
 }
 
 .project-card img {
     height: 240px;
-    object-fit:cover;
+    object-fit: cover;
+    object-position: top;
 }
 
-.project-card h5{
+.project-card h5 {
     font-weight: 800;
     margin-bottom: 1rem;
 }
 
-#projects h1{
+#projects h1 {
     font-size: 2rem;
     font-weight: 700;
 }
 
-#projects p{
+#projects p {
     text-align: left;
     font-size: 1.1rem;
 }
 
 
-.social-icon{
+.social-icon {
     font-size: 2rem;
 }
 
@@ -81,26 +95,26 @@ body {
 
 #footer {
     background:
-        linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
         url("/images/bg-3-img.webp") center / cover no-repeat;
     background-attachment: fixed;
 }
 
-#footer p{
+#footer p {
     font-size: 1rem;
 }
 
-#tools h1{
+#tools h1 {
     font-size: 2rem;
     font-weight: 700;
 }
 
-#tools h3{
+#tools h3 {
     font-size: 1.5rem;
     font-weight: 500;
 }
 
-#contact h1{
+#contact h1 {
     font-size: 2rem;
     font-weight: 700;
 }
@@ -117,7 +131,8 @@ body {
 }
 
 #form-col {
-    background: #FFFFFF !important; /* override bg-black */
+    background: #FFFFFF !important;
+    /* override bg-black */
     border-radius: 10px;
     box-shadow: -1px 3px 6px rgba(0, 0, 0, 0.15);
     padding: 25px !important;
@@ -159,15 +174,15 @@ body {
     border: 2px solid #3A86FF;
 }
 
-#tools{
+#tools {
     height: 60vh;
-    background: 
-      linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-      url("/images/bg-2-img.jpg") center / cover no-repeat;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("/images/bg-2-img.jpg") center / cover no-repeat;
     background-attachment: fixed;
 }
 
-  /* Mobile (default) */
+/* Mobile (default) */
 .icon-img {
     width: 35px;
     object-fit: contain;
@@ -184,19 +199,23 @@ body {
         width: 55px;
         object-fit: contain;
     }
-    #tools h1{
+
+    #tools h1 {
         padding-top: 3rem;
         font-size: 2.5rem;
         font-weight: 700;
     }
-    #projects h1{
+
+    #projects h1 {
         font-size: 2.5rem;
         font-weight: 700;
     }
-    #contact h1{
+
+    #contact h1 {
         font-size: 2.5rem;
         font-weight: 700;
     }
+
     .social-icon-1 {
         font-size: 3rem;
     }
@@ -208,19 +227,23 @@ body {
         width: 65px;
         object-fit: contain;
     }
-    #tools h1{
+
+    #tools h1 {
         padding-top: 3rem;
         font-size: 2.5rem;
         font-weight: 700;
     }
-    #projects h1{
+
+    #projects h1 {
         font-size: 2.5rem;
         font-weight: 700;
     }
-    #contact h1{
+
+    #contact h1 {
         font-size: 2.5rem;
         font-weight: 700;
     }
+
     .social-icon-1 {
         font-size: 4rem;
     }
