@@ -1,6 +1,30 @@
 body {
     overflow-x: hidden;
+    max-width: 100vw;
 }
+
+.navbar-nav .nav-link {
+    position: relative;
+    color: white; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--bs-primary);
+    transition: width 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover::after {
+    width: 100%;
+  }
+
 
 #profile-img {
     height: 14rem;
@@ -50,6 +74,27 @@ body {
 
 .project-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 480px; /* fixed height */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card .card-body {
+    flex: 1 1 auto; 
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
+
+.project-card .mt-auto {
+    margin-top: auto;
 }
 
 .project-card:hover {
@@ -77,7 +122,7 @@ body {
     font-weight: 700;
 }
 
-#projects p {
+#projects p:not(.badge) {
     text-align: left;
     font-size: 1.1rem;
 }
@@ -119,7 +164,27 @@ body {
     font-weight: 700;
 }
 
-/* Section spacing */
+.badge {
+    display: inline-block;
+    width: 25%;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.frontend {
+    background-color: #3b82f6;
+}
+
+.backend {
+    background-color: #f97316;
+}
+
+.fullstack {
+    background-color: #8b5cf6;
+}
+
 #contact {
     padding: 30px 30px;
 }
@@ -132,19 +197,18 @@ body {
 
 #form-col {
     background: #FFFFFF !important;
-    /* override bg-black */
     border-radius: 10px;
     box-shadow: -1px 3px 6px rgba(0, 0, 0, 0.15);
     padding: 25px !important;
 }
 
-/* Labels */
+
 #form-col .form-label {
     color: #003E86 !important;
     font-weight: 500;
 }
 
-/* Inputs */
+
 #form-col .form-control {
     border: 2px solid #003C82;
     border-radius: 8px;
@@ -158,7 +222,7 @@ body {
     box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
 }
 
-/* Button */
+
 #form-col .btn-primary {
     background-color: #3A86FF;
     border: none;
@@ -181,6 +245,19 @@ body {
         url("/images/bg-2-img.jpg") center / cover no-repeat;
     background-attachment: fixed;
 }
+
+
+.slide-up {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 /* Mobile (default) */
 .icon-img {

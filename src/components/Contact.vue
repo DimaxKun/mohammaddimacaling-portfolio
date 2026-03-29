@@ -1,9 +1,9 @@
 <template>
     <!-- Join Map & Contact Form -->
     <div id="contact" class="row align-items-stretch">
-        <h1 class="mt-5 text-center text-light">Contact Me</h1>
+        <h1 class="my-4 text-center text-light slide-up">Get in Touch</h1>
         <!-- Map Start -->
-        <div id="map" class="col-12 col-md-6 d-flex justify-content-center">
+        <div id="map" class="col-12 col-md-6 d-flex justify-content-center slide-up">
             <div class="col-12 col-md-10 p-3 d-flex flex-column">
                 <div id="map-embed" class="flex-grow-1">
                     <iframe
@@ -16,7 +16,7 @@
         <!-- Map End -->
 
         <!-- Contact Form start -->
-        <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start" id="contact-form">
+        <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start slide-up" style="transition-delay: 0.15s;" id="contact-form">
             <div class="col-12 col-md-10 p-3">
                 <form id="form-col" class="bg-black p-3 rounded-2 shadow" @submit.prevent="handleSubmit">
                     <!-- Web3Forms Access Key -->
@@ -101,6 +101,8 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { Modal } from 'bootstrap';
+import { useScrollAnimation } from '../composables/useScrollAnimation';
+useScrollAnimation();
 
 const accessKey = ref('d8ed7a2f-16cb-448b-a7a7-5e3e8e8699bb');
 const recaptchaSiteKey = '6Le3x3EsAAAAAEHgkj8vfyJmvQixXcJt-7qPe094';

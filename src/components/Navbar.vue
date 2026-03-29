@@ -27,3 +27,16 @@
     </nav>
     <!-- End of Navbar -->
 </template>
+
+<style scoped>
+
+#logo-img:hover {
+    color: var(--bs-primary);
+}
+
+nav {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+</style>

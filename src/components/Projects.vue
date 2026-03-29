@@ -2,7 +2,7 @@
     <!-- Projects start -->
     <div class="container-fluid">
         <div class="row mb-5 text-center mt-5 justify-content-center gap-5" id="projects">
-            <h1 class="text-light">Projects</h1>
+            <h1 class="text-light slide-up">Projects</h1>
 
             <!-- First 6 projects -->
             <ProjectCard v-for="project in visibleProjects" :key="project.id" :project="project" />
@@ -33,6 +33,8 @@
 import { computed, ref } from "vue";
 import ProjectCard from "./ProjectCard.vue";
 import projects from "../data/projects.json";
+import { useScrollAnimation } from '../composables/useScrollAnimation';
+useScrollAnimation();
 
 const isExpanded = ref(false);
 
