@@ -74,7 +74,7 @@ body {
 
 .project-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 480px; /* fixed height */
+    height: 480px;
     display: flex;
     flex-direction: column;
 }
@@ -166,11 +166,14 @@ body {
 
 .badge {
     display: inline-block;
-    width: 25%;
-    padding: 4px 10px;
+    padding: 4px 12px;
     border-radius: 999px;
     font-size: 0.8rem;
     color: white;
+
+    width: auto;
+    max-width: 100%;
+    white-space: nowrap;
 }
 
 .frontend {
@@ -225,7 +228,7 @@ body {
 
 #form-col .btn-primary {
     background-color: #3A86FF;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 30px;
     padding: 8px 25px;
     font-size: 14px;
@@ -235,7 +238,7 @@ body {
 #form-col .btn-primary:hover {
     background-color: white;
     color: #3A86FF;
-    border: 2px solid #3A86FF;
+    border-color: #3A86FF;
 }
 
 #tools {
@@ -269,6 +272,23 @@ body {
     font-size: 2rem;
 }
 
+.recaptcha-wrapper {
+    transform-origin: 0 0;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .recaptcha-wrapper {
+        transform: scale(0.85);
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+    .recaptcha-wrapper {
+        transform: scale(0.75);
+    }
+}
 
 /* Medium screens and up (≥768px) */
 @media (min-width: 768px) {
@@ -295,6 +315,10 @@ body {
 
     .social-icon-1 {
         font-size: 3rem;
+    }
+
+    .recaptcha-wrapper {
+        transform: scale(0.9);
     }
 }
 

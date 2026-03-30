@@ -48,7 +48,7 @@
                     </button>
 
                     <!-- reCAPTCHA -->
-                    <div v-if="useRecaptcha" class="mb-3">
+                    <div v-if="useRecaptcha" class="recaptcha-wrapper mt-3">
                         <div ref="recaptchaContainer"></div>
                     </div>
                 </form>
