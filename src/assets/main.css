@@ -179,6 +179,10 @@ body {
     white-space: nowrap;
 }
 
+.mobileapp {
+    background-color: #ff5454;
+}
+
 .frontend {
     background-color: #3b82f6;
 }

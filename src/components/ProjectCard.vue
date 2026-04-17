@@ -9,7 +9,7 @@
         <div class="text-center">
           <span
             class="mb-2 badge rounded-pill"
-            :class="project.type ? project.type.toLowerCase().replace('-', '') : ''"
+            :class="getTypeClass(project.type)"
           >
             {{ project.type }}
           </span>
@@ -44,6 +44,7 @@ const getTypeClass = (type) => {
 
   const t = type.toLowerCase();
 
+  if (t === 'mobile app') return 'mobileapp';
   if (t === 'front-end') return 'frontend';
   if (t === 'back-end') return 'backend';
   if (t === 'full-stack') return 'fullstack';
