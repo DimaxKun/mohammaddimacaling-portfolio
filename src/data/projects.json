@@ -5,7 +5,7 @@
     "type": "Mobile App",
     "description": "EverSafe Baguio is an Android disaster preparedness app built for Baguio City, PH residents, offering real-time weather monitoring, flood and landslide risk alerts, an AI-powered safety chatbot, an interactive evacuation center map, emergency contacts, and more.",
     "image": "/images/eversafebaguio.png",
-    "view": "https://dimaxkun.github.io/EverSafe_Baguio-APP/",
+    "view": "https://eversafe-baguio-mohammad-ali.vercel.app/",
     "source": "https://github.com/DimaxKun/EverSafe_Baguio-APP"
   },
   {
